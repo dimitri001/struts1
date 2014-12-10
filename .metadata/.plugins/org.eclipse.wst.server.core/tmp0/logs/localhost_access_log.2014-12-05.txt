@@ -1,0 +1,4 @@
+127.0.0.1 - - [05/Dec/2014:09:38:52 +0100] "GET / HTTP/1.1" 404 961
+127.0.0.1 - - [05/Dec/2014:09:38:57 +0100] "GET /StrutsSampleMVN1/ HTTP/1.1" 302 -
+127.0.0.1 - - [05/Dec/2014:09:38:57 +0100] "GET /StrutsSampleMVN1/helloWorld.do;jsessionid=27A449A2EF17BD9716E7360AE35ABBA1 HTTP/1.1" 200 273
+127.0.0.1 - - [05/Dec/2014:09:39:23 +0100] "GET /StrutsSampleMVN1/helloWorld.do HTTP/1.1" 200 273
