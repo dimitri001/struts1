@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+			"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          	"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+          	
+<struts-config>
+
+	<form-beans>
+		<form-bean name="helloWorldForm" type="es.korso.form.HelloWorldForm"/>
+		<form-bean name= "operandosForm" type="es.korso.form.SumarForm"/>
+		<form-bean name= "registroForm" type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="login" type="java.lang.String"></form-property>
+			<form-property name="email" type="java.lang.String"></form-property>
+			<form-property name="age" type="java.lang.Byte"></form-property>
+		</form-bean>
+	</form-beans>
+	
+	<global-forwards>
+		<forward name="helloWorld" path="/helloWorld.do"/>
+	</global-forwards>
+	
+	<action-mappings>
+		<action path="/helloWorld" type="es.korso.action.HelloWorldAction"	name="helloWorldForm">
+			<forward name="success" path="/WEB-INF/jsp/helloWorld.jsp"/>
+		</action>	
+		<action path="/sumar" 
+				type="es.korso.action.SumarAction"
+				name="operandosForm"
+				scope="request"
+				validate="true"
+				cancellable="true"
+				input="/WEB-INF/jsp/testForm.jsp">
+			<forward name="ok" path="/WEB-INF/jsp/testForm.jsp"/>
+			<forward name="cancel" path="/WEB-INF/jsp/cancel.jsp"/>	
+		</action>
+		<action path="/registro"
+				type="es.korso.action.RegistroAction"
+				name="registroForm"
+				scope="session"
+				validate="true"
+				cancellable="true"
+				input="/WEB-INF/jsp/testForm.jsp">
+			<forward name="ok" path="/WEB-INF/jsp/registerOK.jsp"/>
+			<forward name="cancel" path="/WEB-INF/jsp/registerKO.jsp"/>		
+		</action>
+	</action-mappings>
+	
+	<message-resources parameter="ApplicationResources" null="false"/>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/org/apache/validator/validator-rules.xml, /WEB-INF/validator/validation.xml"></set-property>
+	</plug-in>
+
+</struts-config>	
