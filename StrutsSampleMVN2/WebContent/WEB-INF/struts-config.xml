@@ -15,11 +15,11 @@
 			<form-property name="age" type="java.lang.Byte"></form-property>
 		</form-bean>
 	</form-beans>
-<!--  	
+<!-- esto para que nos lleve a esta pagina por defecto -->    	
 	<global-forwards>
 		<forward name="helloWorld" path="/helloWorld.do"/>
 	</global-forwards>
--->	
+
 	<action-mappings>
   
 		<action path="/helloWorld" 
@@ -52,7 +52,9 @@
 	
 	<message-resources parameter="ApplicationResources" null="false"/>
 	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+	<!-- valen las dos opciones tanto la comentado como la otra -->
 	<!--  
+	
 		<set-property property="pathnames" value="/org/apache/struts/validator/validator-rules.xml, /WEB-INF/validator/validation.xml"></set-property>
 	-->
 		<set-property property="pathnames" value="/WEB-INF/validator/validator-rules.xml, /WEB-INF/validator/validation.xml"></set-property>
