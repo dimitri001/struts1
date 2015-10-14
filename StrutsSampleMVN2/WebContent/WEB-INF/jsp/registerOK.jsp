@@ -7,8 +7,12 @@
 <title>Mi titulo</title>
 </head>
 <body>
-	
-	<bean:write name="helloWorldForm" property="message"/>
-	
+	<h1>¡¡ Se ha registrado correctamente !!</h1>
+	<h2>Datos de registro</h2>
+	<ul>
+		<li>Login: <bean:write name="registerUser" property="login"/></li>
+		<li>Email: <bean:write name="registerUser" property="email"/></li>
+		<li>Edad:  <bean:write name="registerUser" property="age"/></li>
+	</ul>
 </body>
 </html>

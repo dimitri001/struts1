@@ -9,7 +9,7 @@
   		<param-name>config</param-name>
   		<param-value>/WEB-INF/struts-config.xml</param-value>
   	</init-param>
-  	<load-on-startup>2</load-on-startup>
+  	<load-on-startup>1</load-on-startup>
   </servlet>
   
   <servlet-mapping>
@@ -17,14 +17,11 @@
   	<url-pattern>*.do</url-pattern>
   </servlet-mapping>
   
-  
+<!--   
 
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>/WEB-INF/jsp/testForm.jsp</welcome-file>
   </welcome-file-list>
+  -->
 </web-app>

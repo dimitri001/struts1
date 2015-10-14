@@ -15,15 +15,19 @@
 			<form-property name="age" type="java.lang.Byte"></form-property>
 		</form-bean>
 	</form-beans>
-	
+<!--  	
 	<global-forwards>
 		<forward name="helloWorld" path="/helloWorld.do"/>
 	</global-forwards>
-	
+-->	
 	<action-mappings>
-		<action path="/helloWorld" type="es.korso.action.HelloWorldAction"	name="helloWorldForm">
+  
+		<action path="/helloWorld" 
+				type="es.korso.action.HelloWorldAction"	
+				name="helloWorldForm">
 			<forward name="success" path="/WEB-INF/jsp/helloWorld.jsp"/>
-		</action>	
+		</action>
+			
 		<action path="/sumar" 
 				type="es.korso.action.SumarAction"
 				name="operandosForm"
@@ -48,7 +52,10 @@
 	
 	<message-resources parameter="ApplicationResources" null="false"/>
 	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
-		<set-property property="pathnames" value="/org/apache/validator/validator-rules.xml, /WEB-INF/validator/validation.xml"></set-property>
+	<!--  
+		<set-property property="pathnames" value="/org/apache/struts/validator/validator-rules.xml, /WEB-INF/validator/validation.xml"></set-property>
+	-->
+		<set-property property="pathnames" value="/WEB-INF/validator/validator-rules.xml, /WEB-INF/validator/validation.xml"></set-property>
 	</plug-in>
 
 </struts-config>	
