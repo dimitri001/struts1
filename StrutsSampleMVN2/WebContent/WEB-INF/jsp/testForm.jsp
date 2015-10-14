@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
+<%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html:html>
 <head>
@@ -83,6 +85,11 @@
 		        list.add("++++++++ Dos ++++++++");
 		        pageContext.setAttribute("lista", list);
 			%>	
+		        <ol>
+		   			<logic:iterate id="element" name="lista">
+		       			<li><bean:write name="element" /></li>
+		   			</logic:iterate>
+		   		</ol>
 			</td>  
 
 			<td class="borde">
