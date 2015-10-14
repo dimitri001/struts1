@@ -36,6 +36,8 @@
 	
 				<bean:define   id="login"		name="usuario2" property="login"/>
 				<p><bean:write name="login" /></p>
+				<bean:define   id="email"		name="usuario2" property="email"/>
+			 	<p><bean:write name="email" /></p>
 			 
 				 <%-- Guarda una Cookie en el Bean de nombre "sess". Imprimimos algunos valores --%>
 			 	<p class="nota">Guarda una Cookie en el Bean de nombre "sess".</p>
@@ -43,8 +45,8 @@
 			 	<bean:write name="sess" property="value" />
 			 	<bean:write name="sess" property="secure" />
 			
-		 		<%-- Guarga la cabecera Accept-Language en una variable --%>
-		 		<p class="nota">Guarga la cabecera Accept-Language en una variable</p>
+		 		<%-- Guarda la cabecera Accept-Language en una variable --%>
+		 		<p class="nota">Guarda la cabecera Accept-Language en una variable</p>
 				<bean:header id="var1" name="Accept-Language"/>
 				<p><bean:write name="var1" /></p>
 			
