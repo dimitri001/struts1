@@ -47,9 +47,11 @@ Desktop.ini
 
 RemoteSystemsTempFiles
 Servers 
+Servers/**
 *.pydevproject
 .project
 .metadata
+.recommenders
 bin/**
 tmp/**
 tmp/**/*
