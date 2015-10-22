@@ -48,6 +48,8 @@ Desktop.ini
 RemoteSystemsTempFiles
 Servers 
 Servers/**
+ts
+ts/**
 *.pydevproject
 .project
 .metadata
@@ -66,7 +68,7 @@ local.properties
 /src/main/resources/rebel.xml
 # External tool builders
 .externalToolBuilders/
- 
+tsç 
 # Locally stored "Eclipse launch configurations"
 *.launch
  
